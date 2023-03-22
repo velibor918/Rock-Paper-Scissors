@@ -42,10 +42,12 @@ function playRPS(playerChoice, computerChoice) {
     }
 }   
 
-console.log(playRPS(playerChoice(), computerChoice()));
-console.log(playRPS(playerChoice(), computerChoice()));
-console.log(playRPS(playerChoice(), computerChoice()));
-console.log(playRPS(playerChoice(), computerChoice()));
-console.log(playRPS(playerChoice(), computerChoice()));
-console.log(playRPS(playerChoice(), computerChoice()));
-console.log(playRPS(playerChoice(), computerChoice()));
+function playRPSFull() {
+    console.log(playRPS(playerChoice(), computerChoice()));
+    console.log(playRPS(playerChoice(), computerChoice()));
+    console.log(playRPS(playerChoice(), computerChoice()));
+    console.log(playRPS(playerChoice(), computerChoice()));
+    console.log(playRPS(playerChoice(), computerChoice()));
+}
+
+playRPSFull();
