@@ -34,23 +34,23 @@ function playerChoice() {
 
 function playRPS(playerChoice, computerChoice) {
     if (playerChoice === "Rock" && computerChoice === "Paper") {
-        return "You lose! Paper beats Rock."
+        return "Loss"
     } else if (playerChoice === "Rock" && computerChoice === "Scissors") {
-        return "You win! Rock beats Paper."
+        return "Win"
     } else if (playerChoice === "Rock" && computerChoice === "Rock") {
-        return "It's a tie!"
+        return "Tie"
     } else if (playerChoice === "Paper" && computerChoice === "Rock") {
-        return "You win! Paper beats Rock."
+        return "Win"
     } else if (playerChoice === "Paper" && computerChoice === "Paper") {
-        return "It's a tie!"
+        return "Tie"
     } else if (playerChoice === "Paper" && computerChoice === "Scissors") {
-        return "You lose! Scissors beats Paper."
+        return "Loss"
     } else if (playerChoice === "Scissors" && computerChoice === "Rock") {
-        return "You lose! Rock beats Scissors."
+        return "Loss"
     } else if (playerChoice === "Scissors" && computerChoice === "Scissors") {
-        return "It's a tie!"
+        return "Tie"
     } else if (playerChoice === "Scissors" && computerChoice === "Paper") {
-        return "You win! Scissors beats Paper."
+        return "Win"
     } else {
         return "Somehow we managed to fuck up Rock, Paper, Scissors..."
     }
