@@ -3,13 +3,24 @@
     create prompt for player choice CHECK
     create function that plays one round of RPS CHECK
     create loop that plays RPS 5 times CHECK 
-    add win counters for both player and computer
+    add win counters for both player and computer CHECK
+    add win condition functions
     make win counters increase incrementally */
 
-const rules = ["Rock" , "Paper" , "Scissors"];
+const rules = ["Rock", "Paper", "Scissors"];
 
-let playerWin = 0;
-let computerWin = 0;
+let playerWinCount = 0;
+let computerWinCount = 0;
+
+function playerWin() {
+    playerWinCount += 1;
+    console.log(`You win! ${playerChoice} beats ${computerChoice}. You have ${playerWinCount} and I have ${computerWinCount}.`);
+}
+
+function computerWin() {
+    computerWinCount +=1;
+    console.log(`You lose! ${computerChoice} beats ${playerChoice}. You have ${playerWinCount} and I have ${computerWinCount}.`)
+}
 
 function computerChoice(arr) {
     return rules[Math.floor(Math.random() * rules.length)]
@@ -43,7 +54,7 @@ function playRPS(playerChoice, computerChoice) {
     } else {
         return "Somehow we managed to fuck up Rock, Paper, Scissors..."
     }
-}   
+}
 
 function playRPSFull() {
     console.log(playRPS(playerChoice(), computerChoice()));
