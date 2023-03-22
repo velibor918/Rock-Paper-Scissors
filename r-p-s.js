@@ -2,11 +2,14 @@
     create function for random computer choice CHECK
     create prompt for player choice CHECK
     create function that plays one round of RPS CHECK
-    create loop that plays RPS 5 times
+    create loop that plays RPS 5 times CHECK 
     add win counters for both player and computer
     make win counters increase incrementally */
 
 const rules = ["Rock" , "Paper" , "Scissors"];
+
+let playerWin = 0;
+let computerWin = 0;
 
 function computerChoice(arr) {
     return rules[Math.floor(Math.random() * rules.length)]
