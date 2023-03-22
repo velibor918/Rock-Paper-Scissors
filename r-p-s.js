@@ -14,12 +14,12 @@ let computerWinCount = 0;
 
 function playerWin() {
     playerWinCount += 1;
-    console.log(`You win! ${playerChoice} beats ${computerChoice}. You have ${playerWinCount} and I have ${computerWinCount}.`);
+    console.log(`You win! ${playerChoice()} beats ${computerChoice()}. You have ${playerWinCount} and I have ${computerWinCount}.`);
 }
 
 function computerWin() {
     computerWinCount +=1;
-    console.log(`You lose! ${computerChoice} beats ${playerChoice}. You have ${playerWinCount} and I have ${computerWinCount}.`)
+    console.log(`You lose! ${computerChoice()} beats ${playerChoice()}. You have ${playerWinCount} and I have ${computerWinCount}.`)
 }
 
 function computerChoice(arr) {
@@ -57,11 +57,10 @@ function playRPS(playerChoice, computerChoice) {
 }
 
 function playRPSFull() {
-    console.log(playRPS(playerChoice(), computerChoice()));
-    console.log(playRPS(playerChoice(), computerChoice()));
-    console.log(playRPS(playerChoice(), computerChoice()));
-    console.log(playRPS(playerChoice(), computerChoice()));
-    console.log(playRPS(playerChoice(), computerChoice()));
+console.log(playRPS(playerChoice(), computerChoice()));
+console.log(playRPS(playerChoice(), computerChoice()));
+console.log(playRPS(playerChoice(), computerChoice()));
+console.log(playRPS(playerChoice(), computerChoice()));
+console.log(playRPS(playerChoice(), computerChoice()));
 }
-
 playRPSFull();
