@@ -6,7 +6,8 @@
     add win counters for both player and computer CHECK
     add win condition functions CHECK
     make win counters increase incrementally CHECK
-    incorporate win condition functions in RPS Full Game loop function */
+    incorporate win condition functions in RPS Full Game loop function CHECK
+    add function that checks final result and declares a winner */
 
 const rules = ["Rock", "Paper", "Scissors"];
 
@@ -33,6 +34,16 @@ function playerChoice() {
     let pC = prompt("Let's play a game of Rock, Paper, Scissors!");
     let pCString = pC.toString();
     return pCString.charAt(0).toUpperCase() + pCString.slice(1).toLowerCase();
+}
+
+function scoreCheck(playerWinCount, computerWinCount){
+    if (playerWinCount > computerWinCount) {
+        console.log("You win!")
+    } else if (computerWinCount > playerWinCount) {
+        console.log("You lose!")
+    } else {
+        console.log("It's a tie!")
+    }
 }
 
 function playRPS(playerChoice, computerChoice) {
@@ -78,4 +89,4 @@ playRPS(playerChoice(), computerChoice());
 
 playRPSFull();
 
-// playRPS(playerChoice(), computerChoice())
+scoreCheck(playerWinCount, computerWinCount);
