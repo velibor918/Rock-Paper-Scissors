@@ -31,18 +31,18 @@ function computerChoice(arr) {
 }
 
 function playerChoice() {
-    let pC = prompt("Let's play a game of Rock, Paper, Scissors!");
+    let pC = prompt("Let's play a game of Rock, Paper, Scissors! Best of five wins!");
     let pCString = pC.toString();
     return pCString.charAt(0).toUpperCase() + pCString.slice(1).toLowerCase();
 }
 
 function scoreCheck(playerWinCount, computerWinCount){
     if (playerWinCount > computerWinCount) {
-        console.log("You win!")
+        console.log("The final result is...\n You win!")
     } else if (computerWinCount > playerWinCount) {
-        console.log("You lose!")
+        console.log("The final result is...\n You lose!")
     } else {
-        console.log("It's a tie!")
+        console.log("The final result is...\n It's a tie!")
     }
 }
 
